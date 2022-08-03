@@ -2,10 +2,12 @@
 
 ## Linking audio to effects on ChilloutVR avatars and worlds
 
-AudioLink is a system that analyzes and processes in-world audio into many different highly reactive data streams and exposes the data to ChilloutVR world shaders, and avatar shaders. 
+AudioLink is a system that analyzes and processes in-world audio into many different highly reactive data streams and exposes the data to ChilloutVR world shaders, and avatar shaders.
 
 Technical overview:
 The audio amplitude data is read into shader parameters via the `CVRAudioMaterialParser` component. It is then sent to the GPU for signal processing and buffered into a CustomRenderTexture. Then, the CustomRenderTexture is broadcast globally (called `_AudioTexture`) which can be picked up by shaders both in-world and across all avatars. 
+
+For the original VRChat version see [llealloo/vrc-udon-audio-link](https://github.com/llealloo/vrc-udon-audio-link).
 
 ### [Documentation for shader creators](https://github.com/llealloo/vrc-udon-audio-link/tree/master/Docs)
 
