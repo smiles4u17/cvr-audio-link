@@ -35,21 +35,11 @@ crashlytics-build.properties
 
 
 /TurboRename.meta
-/Udon/
-/Udon.meta
-/UdonSharp/
-/UdonSharp.meta
-/VRCSDK/
-/VRCSDK.meta
-/VRChat Examples/
-/VRChat Examples.meta
+/ABI.CCK/
+/ABI.CCK.meta
 /Gizmos/
 /Gizmos.meta
-/SerializedUdonPrograms/
-/SerializedUdonPrograms.meta
 
-/CyanEmu/
-/CyanEmu.meta
 /AmplifyShaderEditor/
 /AmplifyShaderEditor.meta
 /Plugins/
