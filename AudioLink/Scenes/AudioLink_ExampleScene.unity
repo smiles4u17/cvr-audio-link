@@ -1829,7 +1829,7 @@ PrefabInstance:
     - target: {fileID: 3421592603002456676, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
       propertyPath: guid
-      value: 508f2903-3a7f-45b8-8b20-0ee79271b096
+      value: 5e59630c-d3c2-4a34-940a-653d130dcf09
       objectReference: {fileID: 0}
     - target: {fileID: 5386364711013207602, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
@@ -20701,7 +20701,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: a0c39949-740c-413d-bda0-b9dea6e6cb2f
+    guid: d63a38d5-9795-4253-80cc-db42b9d886c5
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
