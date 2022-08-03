@@ -182,7 +182,12 @@ Shader "AudioLink/Internal/AudioLinkSpectrumUI"
                 } else {
                     c = 1. - 2. * (1. - a) * (1. - b);
                 }
-                
+
+                // Draw the raw samples.
+                float sample = AudioLinkLerpMultiline(ALPASS_WAVEFORM + float2(200. * iuv.x, 0)).r;
+                float close_to_waveform = clamp(1 - 50 * abs(sample - iuv.y* 2. + 1), 0, 1);
+                c = lerp(c, .5, close_to_waveform);
+
                 float4 finalColor = (segment + threshold) * _SeparatorColor + c;
                 UNITY_APPLY_FOG(IN.fogCoord, finalColor);
                 return finalColor;
