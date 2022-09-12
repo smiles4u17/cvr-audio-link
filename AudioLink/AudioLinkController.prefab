@@ -29,7 +29,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2317266064304291296}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -109,6 +110,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 8945950199108606294}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 2102509313099027105}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -130,7 +153,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: a2f37ece-3d35-4680-b13c-818dff3f6aea
+    guid: 99aeb8ac-c182-4005-b2a4-d62665f2d46c
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -1723,7 +1746,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1341745470469106398}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1803,6 +1827,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 4439233687791843391}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 808252615458066666}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -1824,7 +1870,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: fcb9a73e-9e52-4f50-b93e-98458b1f91d8
+    guid: d2de39f9-68bc-4e91-ad1a-3ab1142f3f0f
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -1878,7 +1924,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4095718584091850731}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1958,6 +2005,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 978731968760396648}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 2705213395140331816}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 4571667751896300644}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -1979,7 +2048,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: d27ab8c6-72f0-4685-a0ac-8e16c3eaaf9c
+    guid: 4cbd8d12-fe59-4d2e-8c04-fe161f917de7
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -5732,7 +5801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   syncOwner: 
-  guid: 25f4690c-3d19-4329-babe-fd26c8846db2
+  guid: 45704bca-df18-4394-8fd3-17aeee8f3d88
 --- !u!1 &1783614675306580360
 GameObject:
   m_ObjectHideFlags: 0
@@ -6625,6 +6694,55 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1787493010842704109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8041631363122136972}
+  - component: {fileID: 2753749148504616665}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_Threshold3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8041631363122136972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787493010842704109}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 252188698888577502}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2753749148504616665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787493010842704109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _Threshold3
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.45
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1845803868738972919
 GameObject:
   m_ObjectHideFlags: 0
@@ -6654,7 +6772,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 9004552192955265299}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6734,6 +6853,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 8573114203622574498}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 5503774574925235583}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -6755,7 +6896,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: f65481ab-9b35-4112-bae5-b1c764804cd8
+    guid: 18585cb1-a14f-4aa7-8b41-4474eb1c1186
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -7063,7 +7204,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: acb9a28a-b905-44d0-a769-a29b7c68cd91
+    guid: 96b7cfd5-403c-4c04-ad77-dcf17aecc304
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -7236,6 +7377,55 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2705213395140331816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4095718584091850731}
+  - component: {fileID: 5111305751026365097}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_X1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4095718584091850731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705213395140331816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 649877027494305291}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5111305751026365097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2705213395140331816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _X1
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.25
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2872990861899539819
 GameObject:
   m_ObjectHideFlags: 0
@@ -7366,7 +7556,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: 7d3d98a1-edb5-4761-8514-0f0ae620c1bf
+    guid: 029e7a3b-6787-4ff3-b14f-8e85aa25cc49
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -7541,6 +7731,104 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4283007155510466650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8914956696151217890}
+  - component: {fileID: 1098489889547906441}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_X3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8914956696151217890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283007155510466650}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7888384472066201546}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098489889547906441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283007155510466650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _X3
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.75
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4439233687791843391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341745470469106398}
+  - component: {fileID: 7290358439837750458}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_X0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1341745470469106398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439233687791843391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8706258045574494427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7290358439837750458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4439233687791843391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _X0
+  propertyType: 1
+  intValue: 0
+  floatValue: 0
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4545022975729270827
 GameObject:
   m_ObjectHideFlags: 0
@@ -7615,6 +7903,55 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4647318650402221124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8403138805693979572}
+  - component: {fileID: 7189809776139629141}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_Threshold0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8403138805693979572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647318650402221124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4104639713582674590}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7189809776139629141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647318650402221124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _Threshold0
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.45
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4750820471994705913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,7 +8131,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 338881684114984494}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7874,6 +8212,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 8509370094742212916}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 2738028512242745669}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -7895,7 +8255,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: d45513e5-ca42-43ab-9298-4a8d295f107e
+    guid: 5b2dc674-9c9a-47b7-9f72-901de198791f
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -8024,7 +8384,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8403138805693979572}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8104,6 +8465,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 4647318650402221124}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 5960793981830087748}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -8125,7 +8508,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: 3436ba52-9ae8-44f3-a121-ba7c2582dc73
+    guid: bcdfe1b4-c207-4a52-8005-009925204ef1
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -8254,7 +8637,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8041631363122136972}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8334,6 +8718,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 1787493010842704109}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 1282957342673878961}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -8355,7 +8761,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: 3ac18ef1-0942-404e-9c3c-71dffa19eb26
+    guid: 2bb4aa3f-5358-41eb-92c2-c477054af9c0
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -8409,7 +8815,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8914956696151217890}
   m_Father: {fileID: 5392909458303534656}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8489,6 +8896,28 @@ MonoBehaviour:
       customEvent:
         m_PersistentCalls:
           m_Calls: []
+    - type: 35
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: ABI.CCK.Components.CVRGlobalMaterialPropertyUpdater, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      stringVal4: floatValue
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 4283007155510466650}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 951510147521390331}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
     actionType: 13
     execType: 2
     layerMask:
@@ -8510,7 +8939,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: f5e6e6a0-aab5-4d03-af44-bcaf62bb3954
+    guid: 04def93e-f7bd-42cf-96f4-ecc43d6f72b3
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -8665,7 +9094,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: cb2af1f1-d25d-4336-9172-e9d8e64d0fc1
+    guid: 38e53c40-f75b-45e3-b39e-c31f197870f0
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -8895,7 +9324,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: 75c69b38-274c-40bc-bf00-ffb74f3d7534
+    guid: a5605d9f-7992-4765-a825-fd87800b5eab
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -9287,6 +9716,104 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 123.49658, y: 43.162334, z: 10}
   m_Center: {x: 61.913277, y: -23.93579, z: 0}
+--- !u!1 &8509370094742212916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338881684114984494}
+  - component: {fileID: 7966003528332454484}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_X2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338881684114984494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509370094742212916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1579878685117809408}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7966003528332454484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509370094742212916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _X2
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.5
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8573114203622574498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9004552192955265299}
+  - component: {fileID: 6799901565509239426}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_Threshold1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9004552192955265299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573114203622574498}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8840463527156057367}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6799901565509239426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573114203622574498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _Threshold1
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.45
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8626863707620145708
 GameObject:
   m_ObjectHideFlags: 0
@@ -9362,6 +9889,55 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8945950199108606294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2317266064304291296}
+  - component: {fileID: 808316031429636540}
+  m_Layer: 0
+  m_Name: SpectrumUI_Updater_Threshold2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2317266064304291296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945950199108606294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6273130926610075949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808316031429636540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945950199108606294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091ca3dff91045a8b8da69ddde772e2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 06e7d5350bc8fa842b4bdea5200a3a2f, type: 2}
+  propertyName: _Threshold2
+  propertyType: 1
+  intValue: 0
+  floatValue: 0.45
+  vector4Value: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8974436170272839977
 GameObject:
   m_ObjectHideFlags: 0
@@ -9567,7 +10143,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: a5b303cc-f32b-44a6-a579-13673f0756cc
+    guid: 6519a692-6675-4b63-aee2-84f1dde3c520
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
