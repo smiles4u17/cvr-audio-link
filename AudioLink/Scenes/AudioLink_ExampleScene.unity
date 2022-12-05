@@ -246,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14388874
 GameObject:
@@ -1769,7 +1769,7 @@ PrefabInstance:
     - target: {fileID: 1783614675688150108, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1783614675688150108, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
@@ -1829,7 +1829,7 @@ PrefabInstance:
     - target: {fileID: 3421592603002456676, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
       propertyPath: guid
-      value: 2a4d639b-d435-4305-9f3e-9ea38e4b239e
+      value: 6b4631e8-3d73-4440-9661-2f2023ff695b
       objectReference: {fileID: 0}
     - target: {fileID: 5386364711013207602, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
@@ -4430,7 +4430,7 @@ Transform:
   - {fileID: 1981954337}
   - {fileID: 621907689}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -89.995, z: 0}
 --- !u!1 &332391221
 GameObject:
@@ -4888,7 +4888,7 @@ Transform:
   - {fileID: 1075423194}
   - {fileID: 1616592117}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &361144856
 GameObject:
@@ -4913,8 +4913,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361144856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 0, z: 12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.605751, y: -0.88944995, z: 1.1107502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476561513}
@@ -4942,8 +4942,8 @@ Transform:
   - {fileID: 1252250245}
   - {fileID: 32208406}
   - {fileID: 687428322}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 580018694}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364218635
 GameObject:
@@ -7301,7 +7301,7 @@ Transform:
   - {fileID: 255901014}
   - {fileID: 1493985743}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: 0}
 --- !u!1 &533951246
 GameObject:
@@ -7998,6 +7998,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576902042}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &580018693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580018694}
+  m_Layer: 0
+  m_Name: ExampleWalls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580018694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580018693}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.605751, y: 0.88944995, z: 10.88925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 361144857}
+  - {fileID: 2031243199}
+  - {fileID: 1055772487}
+  - {fileID: 1491018430}
+  - {fileID: 1946260264}
+  - {fileID: 6031207977827387594}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &582692248
 GameObject:
   m_ObjectHideFlags: 0
@@ -10821,7 +10857,7 @@ Transform:
   m_Children:
   - {fileID: 754586368}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -180.00002, z: 0}
 --- !u!1 &775347639
 GameObject:
@@ -14333,7 +14369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055772486}
   m_LocalRotation: {x: -0, y: 0.0000004768371, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 12}
+  m_LocalPosition: {x: 9.605751, y: -0.88944995, z: 1.1107502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1359535607}
@@ -14358,8 +14394,8 @@ Transform:
   - {fileID: 88408379}
   - {fileID: 1526621244}
   - {fileID: 1852291662}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 580018694}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058324953
 GameObject:
@@ -20609,7 +20645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491018429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 12}
+  m_LocalPosition: {x: 13.605751, y: -0.88944995, z: 1.1107502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1483680358}
@@ -20638,8 +20674,8 @@ Transform:
   - {fileID: 203452787}
   - {fileID: 44601495}
   - {fileID: 1460979939}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 580018694}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1491597870
 GameObject:
@@ -20733,7 +20769,7 @@ MonoBehaviour:
     interactionFilter: 0
     interactionInput: 48
     interactionInputModifier: 0
-    guid: 08b99f17-e1bd-4245-aa61-a369a80d2360
+    guid: 15644691-38ae-4d6e-9e42-84b40cd518bf
   onEnterSeat:
     m_PersistentCalls:
       m_Calls: []
@@ -21368,25 +21404,25 @@ MonoBehaviour:
   syncEnabled: 1
   localPlaybackSpeed: 1
   playOnAwakeObject:
-    videoUrl: https://youtu.be/OT9m_sxQtlo
-    videoTitle: DMCA Free Music
-    introEndInSeconds: 5
+    videoUrl: https://www.twitch.tv/parry990228
+    videoTitle: whatever dom was listening to while developing
+    introEndInSeconds: 0
     creditsStartInSeconds: 0
-    thumbnailUrl: https://i.imgur.com/R9biVOu.png
+    thumbnailUrl: 
     isCollapsed: 1
   ProjectionTexture: {fileID: 8400000, guid: 303796bc17fcdac489cbc6cdda0cb15a, type: 2}
   interactiveUI: 1
   autoplay: 1
   subtitleTextComponents: []
   entities:
-  - playlistThumbnailUrl: https://i.imgur.com/R9biVOu.png
-    playlistTitle: DMCA Free Music
+  - playlistThumbnailUrl: 
+    playlistTitle: 
     playlistVideos:
-    - videoUrl: https://youtu.be/OT9m_sxQtlo
-      videoTitle: DMCA Free Music
-      introEndInSeconds: 5
+    - videoUrl: https://www.twitch.tv/parry990228
+      videoTitle: whatever dom was listening to while developing
+      introEndInSeconds: 0
       creditsStartInSeconds: 0
-      thumbnailUrl: https://i.imgur.com/R9biVOu.png
+      thumbnailUrl: 
       isCollapsed: 1
     isCollapsed: 1
   startedPlayback:
@@ -21414,7 +21450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: -51.105003, z: 0}
 --- !u!1 &1526621243
 GameObject:
@@ -27028,7 +27064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946260263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 12}
+  m_LocalPosition: {x: 17.605751, y: -0.88944995, z: 1.1107502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 364218636}
@@ -27084,8 +27120,8 @@ Transform:
   - {fileID: 1263453695}
   - {fileID: 1092086034}
   - {fileID: 1653928040}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 580018694}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1950408289
 GameObject:
@@ -28236,7 +28272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031243198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 12}
+  m_LocalPosition: {x: 5.605751, y: -0.88944995, z: 1.1107502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 878377562}
@@ -28262,8 +28298,8 @@ Transform:
   - {fileID: 385812097}
   - {fileID: 2060194426}
   - {fileID: 299685789}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 580018694}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2033518653
 GameObject:
@@ -29079,7 +29115,7 @@ Transform:
   - {fileID: 1491597871}
   - {fileID: 1903912252}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2072663857
 GameObject:
@@ -31423,14 +31459,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6031207977827387593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: 1, z: 12}
+  m_LocalPosition: {x: 21.605751, y: 0.110550046, z: 1.1107502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6031207976977741231}
   - {fileID: 393423892}
   - {fileID: 853937498}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 580018694}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7192475882708078863
 GameObject:
