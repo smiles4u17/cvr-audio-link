@@ -1826,6 +1826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioLinkController
       objectReference: {fileID: 0}
+    - target: {fileID: 2117421476830590172, guid: 385ac04e8d2b6f84ea93cb8392fad970,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 1724500930}
     - target: {fileID: 3421592603002456676, guid: 385ac04e8d2b6f84ea93cb8392fad970,
         type: 3}
       propertyPath: guid
@@ -3911,6 +3916,7 @@ GameObject:
   - component: {fileID: 299685792}
   - component: {fileID: 299685791}
   - component: {fileID: 299685790}
+  - component: {fileID: 299685793}
   m_Layer: 0
   m_Name: BackOfWallDebug
   m_TagString: Untagged
@@ -3925,13 +3931,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299685788}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0.0021380559, y: 0.99999624, z: -0.0017016616, w: 0.0000036382612}
   m_LocalPosition: {x: -0.05000019, y: 1.07, z: 0.11499977}
   m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2031243199}
   m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.19500001, y: 180, z: 0.245}
 --- !u!64 &299685790
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3993,6 +3999,71 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299685788}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &299685793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299685788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45fb99111d54dba84a8ff33016b93fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: 
+  actions:
+  - delay: 0
+    operations:
+    - type: 36
+      targets:
+      - {fileID: 0}
+      floatVal: 0
+      stringVal: 
+      stringVal2: 
+      stringVal3: 
+      stringVal4: 
+      boolVal: 0
+      boolVal2: 0
+      gameObjectVal: {fileID: 0}
+      floatVal2: 0
+      floatVal3: 0
+      floatVal4: 0
+      varBufferVal: {fileID: 0}
+      varBufferVal2: {fileID: 0}
+      varBufferVal3: {fileID: 0}
+      animationVal: {fileID: 0}
+      customEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    actionType: 15
+    execType: 2
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    floatVal: 0
+    floatVal2: 0
+    floatVal3: 0
+    boolVal: 0
+    varBufferVal: {fileID: 0}
+    varBufferVal2: {fileID: 0}
+    stringVal: 
+    allowedPointer: []
+    allowedPointerCollapse: 0
+    allowedTypes: []
+    allowedTypesCollapse: 0
+    specificParticleSystems: []
+    specificParticleSystemsCollapse: 0
+    interactionFilter: 0
+    interactionInput: 48
+    interactionInputModifier: 0
+    guid: 
+  onEnterSeat:
+    m_PersistentCalls:
+      m_Calls: []
+  onExitSeat:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &303043614
 GameObject:
   m_ObjectHideFlags: 0
@@ -21404,7 +21475,7 @@ MonoBehaviour:
   syncEnabled: 1
   localPlaybackSpeed: 1
   playOnAwakeObject:
-    videoUrl: https://www.twitch.tv/parry990228
+    videoUrl: https://www.youtube.com/watch?v=5qap5aO4i9A
     videoTitle: whatever dom was listening to while developing
     introEndInSeconds: 0
     creditsStartInSeconds: 0
@@ -21418,7 +21489,7 @@ MonoBehaviour:
   - playlistThumbnailUrl: 
     playlistTitle: 
     playlistVideos:
-    - videoUrl: https://www.twitch.tv/parry990228
+    - videoUrl: https://youtu.be/Kz8nhev2Z_w
       videoTitle: whatever dom was listening to while developing
       introEndInSeconds: 0
       creditsStartInSeconds: 0
@@ -24467,6 +24538,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714477186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!83 &1724500930
+AudioClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Microphone
+  m_LoadType: 0
+  m_Channels: 0
+  m_Frequency: 0
+  m_BitsPerSample: 0
+  m_Length: 0
+  m_IsTrackerFormat: 0
+  m_Ambisonic: 0
+  m_SubsoundIndex: 0
+  m_PreloadAudioData: 1
+  m_LoadInBackground: 0
+  m_Legacy3D: 0
+  m_Resource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_CompressionFormat: 0
+  m_EditorResource:
+    m_Source: 
+    m_Offset: 0
+    m_Size: 0
+  m_EditorCompressionFormat: 0
 --- !u!1 &1726274426
 GameObject:
   m_ObjectHideFlags: 0
