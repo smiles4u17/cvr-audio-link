@@ -14,7 +14,7 @@ namespace AudioLink {
     public class AudioLinkEditor : EditorWindow {
         public CVRAudioMaterialParser audioMaterialParser;
         public AudioSource audioSource;
-        public string microphoneName = " --- select microphone --- ";
+        public string microphoneName = "";
 
 
         public void OnGUI() {
@@ -44,6 +44,9 @@ namespace AudioLink {
             GenericMenu menu = new GenericMenu();
             foreach (var device in Microphone.devices) {
                 menu.AddItem(new GUIContent($"{device}"), false, handleDropdownItemClicked, device);
+            }
+            if (microphoneName.Length == 0 && Microphone.devices.Length > 0) {
+                microphoneName = Microphone.devices[0];
             }
             if (EditorGUI.DropdownButton(R(20), new GUIContent(microphoneName), FocusType.Keyboard)) {
                 menu.ShowAsContext();
