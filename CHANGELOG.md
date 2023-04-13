@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 - April 13th, 2023
+### New features
+- Can now preview audio linked shaders in editor via Tools > AudioLinkEditor (Thanks, DomNomNom)
+
 ## 0.2.8 - May 14th, 2022
 ### New features
 - AudioLink theme colors are now configurable via the AudioLink controller with a slick color-picker GUI. (Thanks, DomNomNom)
