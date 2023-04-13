@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.IO;
 
 #if UNITY_EDITOR
 public class ExportAudioLinkPackage : MonoBehaviour
@@ -31,6 +32,9 @@ public class ExportAudioLinkPackage : MonoBehaviour
     [MenuItem("Tools/Export AudioLink Packages")]
     static void ExportPackageAudioLink()
     {
+
+        string version = new StreamReader("Assets/AudioLink/VERSION.txt").ReadLine();
+
         CleanupArtifacts();
         CopyArtifacts();
 
@@ -39,7 +43,7 @@ public class ExportAudioLinkPackage : MonoBehaviour
         exportedPackageAssetList.Add("Assets/AudioLink/Docs");
         exportedPackageAssetList.Add("Assets/AudioLink/CHANGELOG.md");
 
-        AssetDatabase.ExportPackage(exportedPackageAssetList.ToArray(), "AudioLink-full.unitypackage",
+        AssetDatabase.ExportPackage(exportedPackageAssetList.ToArray(), $"AudioLink-CVR-{version}-full.unitypackage",
             ExportPackageOptions.Recurse );
 
         var exportedMinimal = new List<string>();
@@ -57,7 +61,7 @@ public class ExportAudioLinkPackage : MonoBehaviour
         exportedMinimal.Add( "Assets/AudioLink/Resources" );
         exportedMinimal.Add( "Assets/AudioLink/CHANGELOG.md" );
 
-        AssetDatabase.ExportPackage(exportedMinimal.ToArray(), "AudioLink-minimal.unitypackage",
+        AssetDatabase.ExportPackage(exportedMinimal.ToArray(), $"AudioLink-CVR-{version}-minimal.unitypackage",
             ExportPackageOptions.Recurse );
 
         CleanupArtifacts();

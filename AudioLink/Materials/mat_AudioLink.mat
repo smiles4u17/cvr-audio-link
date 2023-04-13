@@ -88,11 +88,11 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnableAutogain: 0
-    - _FadeExpFalloff: 0.75
+    - _FadeExpFalloff: 0.7
     - _FadeLength: 0.25
     - _FreqCeiling: 1
     - _FreqFloor: 0.123
-    - _Gain: 1
+    - _Gain: 1.2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
