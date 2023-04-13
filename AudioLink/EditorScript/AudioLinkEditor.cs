@@ -1,21 +1,66 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+
 using System.Collections.Generic;
-using UnityEngine;
+using System.Collections;
+using System.Reflection;
+using System;
 using UnityEditor;
-using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
+using UnityEngine;
 
 using ABI.CCK.Components;
 
-using UnityEngine.Rendering;
 
 
 namespace AudioLink {
-    public class AudioLinkEditor : EditorWindow {
-        public CVRAudioMaterialParser audioMaterialParser;
-        public AudioSource audioSource;
-        public string microphoneName = "";
 
+    [InitializeOnLoad]
+    public class AudioLinkEditor : EditorWindow {
+        public enum InputType {
+            Microphone,
+            SoundFile
+        }
+
+
+        public static CVRAudioMaterialParser audioMaterialParser;
+        public static InputType inputType = InputType.Microphone;
+        public static AudioSource audioSource = null;
+        public static string microphoneName = "";
+        public static AudioClip audioClip = null;
+        public static bool audioClipMuted = false;
+
+        static AudioLinkEditor() {
+            UnityEditor.EditorApplication.update += MyUpdate;
+        }
+
+
+        public void OnEnable() {
+            if (!audioMaterialParser) {
+                audioMaterialParser = GameObject.FindObjectOfType<CVRAudioMaterialParser>();
+            }
+            if (audioMaterialParser) {
+                audioSource = audioMaterialParser.GetComponentInChildren<AudioSource>();
+            }
+            if (microphoneName.Length == 0 && Microphone.devices.Length > 0) {
+                int bestMicIndex = 0;
+                void prioritize(string deviceNameSnippet) {
+                    for (int i=0; i<Microphone.devices.Length; ++i) {
+                        if (Microphone.devices[i].ToLower().Contains(deviceNameSnippet)) {
+                            bestMicIndex = i;
+                            return;
+                        }
+                    }
+                }
+                // Prioritize virtual audio cables that carry music.
+                prioritize("cable");
+                prioritize("music");
+                microphoneName = Microphone.devices[bestMicIndex];
+            }
+
+            ApplySavedState();
+
+        }
 
         public void OnGUI() {
             int total_height = 2;
@@ -28,53 +73,117 @@ namespace AudioLink {
                 total_height += margin_bottom;
                 return new Rect(margin_left, y, position.width - margin_left, height);
             }
+            R(0); // Margin top
 
-            R(0);
             audioMaterialParser = EditorGUI.ObjectField(R(20), "Controller Sync", audioMaterialParser, typeof(CVRAudioMaterialParser), true) as CVRAudioMaterialParser;
             if (!audioMaterialParser) {
                 audioMaterialParser = GameObject.FindObjectOfType<CVRAudioMaterialParser>();
             }
+            if (!audioMaterialParser) {
+                StopAllClips();
+                if (GUI.Button(R(40), "Add AudioLink to scene")) {
+                    PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(
+                        "Assets/AudioLink/AudioLinkController.prefab"
+                    ));
+                }
+                return;
+            }
 
-            // Microphone
-            EditorGUI.LabelField(R(20), "Microphone device:");
-            void handleDropdownItemClicked(object parameter) {
-                microphoneName = parameter as string;
+            // InputType
+            {
+                EditorGUI.LabelField(R(20), "Input Type:");
+                void handleInputTypeDropdownItemClicked(object parameter) {
+                    inputType = (InputType)parameter;
+                    StartMicrophone();
+                }
+                GenericMenu menu = new GenericMenu();
+                foreach (var inputType in (InputType[])Enum.GetValues(typeof(InputType))) {
+                    menu.AddItem(new GUIContent($"{inputType}"), false, handleInputTypeDropdownItemClicked, inputType);
+                }
+                if (EditorGUI.DropdownButton(R(20), new GUIContent(inputType.ToString()), FocusType.Keyboard)) {
+                    menu.ShowAsContext();
+                }
+            }
+
+
+            if (inputType == InputType.Microphone) {
+                // Microphone
+                EditorGUI.LabelField(R(20), "Microphone device:");
+                void handleDropdownItemClicked(object parameter) {
+                    microphoneName = parameter as string;
+                    StartMicrophone();
+                }
+                GenericMenu menu = new GenericMenu();
+                foreach (var device in Microphone.devices) {
+                    menu.AddItem(new GUIContent($"{device}"), false, handleDropdownItemClicked, device);
+                }
+                if (EditorGUI.DropdownButton(R(20), new GUIContent(microphoneName), FocusType.Keyboard)) {
+                    menu.ShowAsContext();
+                }
+                EditorGUI.HelpBox(R(60), "You can use something like Virtual Audio Cable to create a microphone device which plays your music that you jam to while working on your shaders.", MessageType.Info);
+            } else if (inputType == InputType.SoundFile) {
+                audioClip = EditorGUI.ObjectField(R(20), "AudioClip", audioClip, typeof(AudioClip), true) as AudioClip;
+                audioClipMuted = EditorGUI.Toggle(R(20), "Mute", audioClipMuted);
+            }
+
+            ApplySavedState();
+        }
+
+        void ApplySavedState() {
+            // Find the audioSources
+            if (!audioMaterialParser) return;
+            audioSource = audioMaterialParser.GetComponentInChildren<AudioSource>();
+
+            if (inputType == InputType.Microphone) {
+                StopAllClips();
                 StartMicrophone();
+            } else if (inputType == InputType.SoundFile) {
+                if (audioSource.clip != audioClip) {
+                    audioSource.clip = audioClip;
+                    StopAllClips();
+                }
+                if (!audioSource.isPlaying) {
+                    audioSource.Play();
+                }
+                if (audioClipMuted) {
+                    StopAllClips();
+                } else if (audioClip && !IsClipPlaying(audioClip)) {
+                    PlayClip(audioClip, audioSource.timeSamples, true);
+                }
             }
-            GenericMenu menu = new GenericMenu();
-            foreach (var device in Microphone.devices) {
-                menu.AddItem(new GUIContent($"{device}"), false, handleDropdownItemClicked, device);
-            }
-            if (microphoneName.Length == 0 && Microphone.devices.Length > 0) {
-                microphoneName = Microphone.devices[0];
-            }
-            if (EditorGUI.DropdownButton(R(20), new GUIContent(microphoneName), FocusType.Keyboard)) {
-                menu.ShowAsContext();
-            }
-
-
-            // audioSource = EditorGUI.ObjectField(R(20), "AudioSource", audioSource, typeof(AudioSource), true) as AudioSource;
-            if (audioMaterialParser) {
-                audioSource = audioMaterialParser.GetComponentInChildren<AudioSource>();
-            }
-            if (audioSource) {
-                StartMicrophone();
-            }
-
-            EditorGUI.HelpBox(R(50), "You can use something like Virtual Audio Cable to create a microphone device which plays your music that you jam to while working on your shaders.", MessageType.Info);
         }
 
         void StartMicrophone() {
-            audioSource.clip = Microphone.Start(microphoneName, true, 1, 44100);
-            audioSource.Play();
+            try {
+                audioSource.clip = Microphone.Start(microphoneName, true, 1, 44100);
+            } catch (ArgumentException err) {
+                if (microphoneName != "") throw err;
+            }
+            if (!audioSource.isPlaying) {
+                audioSource.Play();
+            }
         }
 
-        public void Update() {
+        public static void MyUpdate() {
+            if (!audioMaterialParser) {
+                return; // Audiolink controller has been deleted.
+            }
+            SetMaterialPropertiesFromSliders();
             SendAudioOutputData();
             CustomRenderTexture customRenderTexture = audioMaterialParser.GetComponent<CVRCustomRenderTextureUpdater>().customRenderTexture;
-            customRenderTexture.Update();
+            // customRenderTexture.Update();
             Shader.SetGlobalTexture("_AudioTexture", customRenderTexture, RenderTextureSubElement.Default);
         }
+
+        static void SetMaterialPropertiesFromSliders() {
+            foreach (CVRVariableBuffer buffer in audioMaterialParser.GetComponentsInChildren<CVRVariableBuffer>()) {
+                CVRGlobalMaterialPropertyUpdater updater = buffer.GetComponent<CVRGlobalMaterialPropertyUpdater>();
+                Debug.Assert(updater.propertyType == CVRGlobalMaterialPropertyUpdater.PropertyType.paramFloat);
+                Debug.Assert(updater.material);
+                updater.material.SetFloat(updater.propertyName, buffer.defaultValue);
+            }
+        }
+
 
         [MenuItem("Tools/AudioLinkEditor")]
         public static void ShowMyEditor()
@@ -85,22 +194,24 @@ namespace AudioLink {
 
         // -------- below this, we're adating code from AudioLink.cs, found in the VRChat version --------
 
-        private float[] _spectrumValues = new float[1024];
-        private float[] _spectrumValuesTrim = new float[1023];
-        private float[] _audioFramesL = new float[1023 * 4];
-        private float[] _audioFramesR = new float[1023 * 4];
-        private float[] _samples = new float[1023];
-        // Fix for AVPro mono game output bug (if running the game with a mono output source like a headset)
-        private int _rightChannelTestDelay = 300;
-        private int _rightChannelTestCounter;
-        private bool _ignoreRightChannel = false;
 
 
 
-        void SendAudioOutputData()
-        {
+        static int _rightChannelTestCounter = 0;
+        private static void SendAudioOutputData() {
+            float[] _spectrumValues = new float[1024];
+            float[] _spectrumValuesTrim = new float[1023];
+            float[] _audioFramesL = new float[1023 * 4];
+            float[] _audioFramesR = new float[1023 * 4];
+            float[] _samples = new float[1023];
+            // Fix for AVPro mono game output bug (if running the game with a mono output source like a headset)
+            int _rightChannelTestDelay = 300;
+            bool _ignoreRightChannel = false;
+
+            if (!audioMaterialParser || !audioSource) {
+                return; // Audiolink controller has been deleted.
+            }
             Material audioMaterial = audioMaterialParser.processingMaterial;
-
             audioSource.GetOutputData(_audioFramesL, 0);                // left channel
             // Debug.Log(_audioFramesL[1]);
 
@@ -139,5 +250,69 @@ namespace AudioLink {
         }
 
 
+
+
+
+
+
+        // Based on https://answers.unity.com/questions/844896/how-to-play-audioclip-from-editor-from-a-start-sam.html
+
+        public static void PlayClip(AudioClip clip , int startSample , bool loop) {
+            Assembly unityEditorAssembly = typeof(AudioImporter).Assembly;
+            Type audioUtilClass = unityEditorAssembly.GetType("UnityEditor.AudioUtil");
+            MethodInfo method = audioUtilClass.GetMethod(
+                "PlayClip",
+                BindingFlags.Static | BindingFlags.Public,
+                null,
+                new System.Type[] {
+                typeof(AudioClip),
+                typeof(Int32),
+                typeof(Boolean)
+            },
+            null
+            );
+            method.Invoke(
+                null,
+                new object[] {
+                clip,
+                startSample,
+                loop
+            }
+            );
+        }
+
+        public static void StopAllClips () {
+            Assembly unityEditorAssembly = typeof(AudioImporter).Assembly;
+            Type audioUtilClass = unityEditorAssembly.GetType("UnityEditor.AudioUtil");
+            MethodInfo method = audioUtilClass.GetMethod(
+                "StopAllClips",
+                BindingFlags.Static | BindingFlags.Public
+                );
+
+            method.Invoke(
+                null,
+                null
+                );
+        }
+
+        public static bool IsClipPlaying(AudioClip clip) {
+            Assembly unityEditorAssembly = typeof(AudioImporter).Assembly;
+            Type audioUtilClass = unityEditorAssembly.GetType("UnityEditor.AudioUtil");
+            MethodInfo method = audioUtilClass.GetMethod(
+                "IsClipPlaying",
+                BindingFlags.Static | BindingFlags.Public
+                );
+
+            bool playing = (bool)method.Invoke(
+                null,
+                new object[] {
+                clip,
+            }
+            );
+
+            return playing;
+        }
     }
 }
+
+#endif
